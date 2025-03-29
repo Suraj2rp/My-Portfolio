@@ -1,0 +1,111 @@
+#home {
+  text-align: center;
+  padding: 150px 20px;
+  background: var(--bg-home);/* Fixed gradient syntax */
+  color: white;
+  height: 720px;
+}
+
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    animation: bounce 1.5s infinite alternate;
+  }
+  
+  @keyframes bounce {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .typing-text {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .cursor {
+    color: cyan;
+    font-weight: bold;
+    animation: blink 0.8s infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .hide-cursor .cursor {
+    display: none;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: white;
+  }
+  .aspiring{
+    color:white;
+  }
+  h2 span {
+    color: cyan;
+  }
+  
+  p {
+    font-size: 1.5rem;
+    margin: 10px 0 20px;
+    
+  }
+  .intro{
+    color:white;
+  }
+  a{
+    color:white;
+  }
+  
+  .btn {
+    background-color: cyan;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #00bcd4;
+  }
+  
+  .social-links {
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    
+  }
+  .social-links a {
+    color: var(--social-color);
+  }
+  
+  .social-links a {
+    align-items: center;
+    justify-items: center;
+    
+    font-size: 1.3rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: #03c6e0;
+  }
+  

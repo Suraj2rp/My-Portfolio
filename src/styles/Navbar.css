@@ -1,0 +1,141 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px 10px 30px;
+    background: var(--bg-home);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-color);
+    position: relative;
+    padding: 8px 12px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Active link styling with glowing effect */
+.nav-links a.active {
+    color: var(--accent-color);
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(45deg, #ff0077, #ffcc00);
+    box-shadow: 0px 0px 8px rgba(255, 0, 119, 0.8);
+    border-radius: 10px;
+    animation: glowing 1.5s infinite alternate;
+}
+
+/* Hover Effect */
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: var(--accent-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+    transform: scaleX(1);
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Cool Glowing Animation */
+@keyframes glowing {
+    0% { opacity: 0.5; transform: scaleX(1); }
+    100% { opacity: 1; transform: scaleX(1.2); }
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background: none;
+    border: 2px solid var(--text-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode-toggle:hover {
+    background: var(--text-color);
+    color: var(--nav-bg);
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 6px 10px;
+    }
+    
+    .dark-mode-toggle {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
